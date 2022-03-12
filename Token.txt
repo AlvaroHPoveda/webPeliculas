@@ -1,0 +1,2 @@
+Token de acceso de lectura a la API (v4 auth)
+eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YzU3OWFmYzEzZjlhNzI5NTFmZTU1YTI4MGYzYjEzYyIsInN1YiI6IjYyMmJmMjdkYjM0NDA5MDA2ZTg0NjgyMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.A4sL0BisAvmjA2BcS4aLX_6o09xUY2NX0NWjQt4bfKs
