@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/movies.css";
 
 const Movies = () => {
@@ -19,22 +20,22 @@ const Movies = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  console.log(movies.movies);
-
   return (
     <section className="sectionMovies">
       <h1 className="h1Movies">Page Movies</h1>
       <article className="divMovies">
         {movies.movies?.map((movie) => (
-          <ul className="ulMovies">
+          <ul key={movie.id} className="ulMovies">
             <li className="liMovies">
-              <img
-                src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-                alt=""
-                className="imgMovies"
-              />
-              <h4 className="titleMovies">{movie.original_title}</h4>
-              <p className="pMovies">{movie.overview}</p>
+              <Link to={movie.id.toString()}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                  alt=""
+                  className="imgMovies"
+                />
+                <h4 className="titleMovies">{movie.original_title}</h4>
+                <p className="pMovies">{movie.overview}</p>
+              </Link>
             </li>
           </ul>
         ))}
